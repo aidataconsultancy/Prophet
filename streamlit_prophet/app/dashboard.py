@@ -64,7 +64,7 @@ with st.expander(
 st.write("")
 
 st.sidebar.image(load_image("logo1.png.png"), use_column_width=True)
-display_links(readme["links"]["repo"], readme["links"]["article"])
+#display_links(readme["links"]["repo"], readme["links"]["article"])
 
 
 st.sidebar.title("1. Data")
