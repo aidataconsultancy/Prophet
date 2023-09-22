@@ -21,7 +21,7 @@ Satisfied with your experiments? Hit "save experiment" and download all your plo
 
 [tooltips]
 launch_forecast = """
-Check to launch forecast. A new forecast will be made each time some parameter is changed in the sidebar.
+Bear in mind, every time you tweak a parameter in the sidebar, we'll whip up a fresh forecast for you.
 """
 track_experiments = """
 Check to get a link to download a report at the bottom of the page.
@@ -29,8 +29,8 @@ The report contains the data, the plots and the config used to get them.
 Use it only when you actually want to save experiments, as it might make processings a bit slower.
 """
 upload_choice = """
-* Check to load a toy dataset and see what can be done with this app.
-* Uncheck to upload your own dataset.
+* Tick the box to load a sample dataset and discover the capabilities of this app. 
+* To use your own data, simply untick the box.
 """
 custom_config = """
 Follow these steps to provide your own configuration file:
@@ -46,12 +46,12 @@ dataset_upload = """
 Your csv file should have at least a column with dates and a column with numeric values to forecast.
 """
 toy_dataset = """
-Five toy datasets are available:
-* __Retail sales__: Sales from Walmart stores (daily)
-* __House sales__: House sales in London boroughs (monthly)
-* __Energy consumption__: Households energy consumption (daily)
-* __Weather__: Temperature in Madrid (hourly)
-* __Commodity prices__: Corn price in USD per bushel (weekly)
+Pick a Sample Dataset:
+* __Retail sales__: Daily sales from Walmart stores.
+* __House sales__: Monthly house sales in London boroughs.
+* __Energy consumption__:Daily energy consumption of households.
+* __Weather__: Hourly temperature readings in Madrid.
+* __Commodity prices__: Weekly corn prices in USD per bushel.
 """
 date_format = """
 For example "%Y-%m-%d" or "%d/%m/%Y %H:%M:%S".
@@ -66,13 +66,14 @@ target_column = """
 Quantity to be forecasted
 """
 dimensions = """
-Prophet can only forecast one series at a time.
-In case your dataset contains several time series, you might want to filter or aggregate these different series.
-Dimensions are the columns on which the dataset can be filtered and aggregated on. \n
-You don't have to select dimensions. In case no dimension is selected,
-all target values at the same date will be aggregated in order to get one target value per date.\n
-Example: For a dataset containing sales from 3 countries A, B and C, you could select countries B and C, and
-forecast the sum of their sales.
+Keep in mind, the model is tailored to forecast a single series at once.
+If your dataset hosts multiple time series, you might wish to sift through or combine these series.
+The dimensions refer to the columns allowing such filtering and aggregation. \n
+Choosing dimensions isn't mandatory. 
+If you opt not to pick any, every target value falling on the same date will be merged, 
+resulting in a single target value for each date. \n
+For instance: Imagine a dataset detailing sales from three countries: A, B, and C. 
+You could pinpoint countries B and C, aiming to predict the combined sales from both.
 """
 dimensions_keep = """
 Check to keep all values or uncheck to filter values on column
@@ -288,5 +289,5 @@ If you detect a recurring error, change cleaning options or model parameters to 
 """
 
 [links]
-repo = "https://github.com/artefactory/streamlit_prophet"
+repo = "https://github.com/aidataconsultancy/Prophet"
 article = "https://medium.com/artefact-engineering-and-data-science/visual-time-series-forecasting-with-streamlit-prophet-71d86a769928"
